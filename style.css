@@ -25,6 +25,7 @@ body {
     box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
     width: 240px;
     z-index: 600;
+    background-color: rgb(212, 197, 168);
 }
 
 @media (max-width: 991.98px) {
@@ -77,6 +78,8 @@ body {
 a {
     text-decoration: none
 }
+
+.next{float:right}
 
 .header {
     width: 100%;
@@ -231,7 +234,7 @@ a {
 
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: lightblue !important;
+    background-color: rgb(13, 51, 62) !important;
     color: black;
 }
 
@@ -246,22 +249,28 @@ input[type="text"] {
 
 
 .container {
+    color: rgb(6, 38, 51);
     margin-top: 150px;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    background-color: rgb(237, 234, 234);
+    background-color: rgb(212, 197, 168);
 }
 
-.next-button {
-    background-color: rgb(26, 26, 26) !important;
+.d-flex #next-button {
+    background-color: rgb(6, 38, 51) !important;
     color: #fff !important;
     margin: 50px;
     padding: 10px 20px;
-    border: none;
     cursor: pointer;
-    text-align: center;
-    justify-content: center;
+    /* text-align: center; */
+    float: right;
+}
+
+#next-button:hover{
+    border: 2px solid rgb(6, 38, 51);
+    color: rgb(6, 38, 51);
+    background-color: rgb(212, 197, 168);
 }
 
 .previous {
@@ -271,7 +280,7 @@ input[type="text"] {
 .question {
     text-align: center;
     justify-content: center;
-    color: black;
+    color: rgb(6, 38, 51);
     font-size: 20px;
 }
 
