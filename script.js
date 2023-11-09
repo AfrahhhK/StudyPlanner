@@ -27,6 +27,24 @@ function showNextQuestion() {
 }
 
 function showPrevQuestion() {
+    if (currentQuestion > 1) {
+        document.getElementById(`question${currentQuestion}`).style.display = 'none';
+        currentQuestion--;
+        document.getElementById(`question${currentQuestion}`).style.display = 'block';
+
+        // if (currentQuestion === 1) {
+        //     prevButton.style.display = 'none';
+        // }
+
+        nextButton.textContent = 'Next';
+    }
+}
+
+prevButton.addEventListener('click', function () {
+    showPrevQuestion();
+});
+
+function showPrevQuestion() {
     document.getElementById(`question${currentQuestion}`).style.display = 'none';
 
     if (currentQuestion > 1) {
@@ -34,13 +52,12 @@ function showPrevQuestion() {
         document.getElementById(`question${currentQuestion}`).style.display = 'block';
     }
 
-    if (currentQuestion === 1) {
-        prevButton.style.display = 'none';
-    }
+    // if (currentQuestion === 1) {
+    //     prevButton.style.display = 'none';
+    // }
 
     nextButton.textContent = 'Next';
 }
-
 
 
 

@@ -79,7 +79,9 @@ a {
     text-decoration: none
 }
 
-.next{float:right}
+.next {
+    float: right
+}
 
 .header {
     width: 100%;
@@ -258,8 +260,8 @@ input[type="text"] {
 }
 
 .d-flex #next-button {
-    background-color: rgb(6, 38, 51) !important;
-    color: #fff !important;
+    background-color: rgb(6, 38, 51);
+    color: #fff;
     margin: 50px;
     padding: 10px 20px;
     cursor: pointer;
@@ -267,7 +269,23 @@ input[type="text"] {
     float: right;
 }
 
-#next-button:hover{
+.d-flex #prev-button {
+    background-color: rgb(6, 38, 51);
+    color: #fff;
+    margin: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    /* text-align: center; */
+    float: right;
+}
+
+#next-button:hover {
+    border: 2px solid rgb(6, 38, 51);
+    color: rgb(6, 38, 51);
+    background-color: rgb(212, 197, 168);
+}
+
+#prev-button:hover {
     border: 2px solid rgb(6, 38, 51);
     color: rgb(6, 38, 51);
     background-color: rgb(212, 197, 168);
