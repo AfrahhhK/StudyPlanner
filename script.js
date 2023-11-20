@@ -1,63 +1,53 @@
-let currentQuestion = 1;
-const totalQuestions = 4;
+// const body = document.querySelector("body");
+// const darkLight = document.querySelector("#darkLight");
+// const sidebar = document.querySelector(".sidebar");
+// const submenuItems = document.querySelectorAll(".submenu_item");
+// const sidebarOpen = document.querySelector("#sidebarOpen");
+// const sidebarClose = document.querySelector(".collapse_sidebar");
+// const sidebarExpand = document.querySelector(".expand_sidebar");
+// sidebarOpen.addEventListener("click", () => sidebar.classList.toggle("close"));
 
-const nextButton = document.getElementById('next-button');
-const prevButton = document.getElementById('prev-button');
+// sidebarClose.addEventListener("click", () => {
+//     sidebar.classList.add("close", "hoverable");
+// });
+// sidebarExpand.addEventListener("click", () => {
+//     sidebar.classList.remove("close", "hoverable");
+// });
 
-nextButton.addEventListener('click', function () {
-    showNextQuestion();
-});
+// sidebar.addEventListener("mouseenter", () => {
+//     if (sidebar.classList.contains("hoverable")) {
+//         sidebar.classList.remove("close");
+//     }
+// });
+// sidebar.addEventListener("mouseleave", () => {
+//     if (sidebar.classList.contains("hoverable")) {
+//         sidebar.classList.add("close");
+//     }
+// });
 
-prevButton.addEventListener('click', function () {
-    showPrevQuestion();
-});
+// darkLight.addEventListener("click", () => {
+//     body.classList.toggle("dark");
+//     if (body.classList.contains("dark")) {
+//         document.setI
+//         darkLight.classList.replace("bx-sun", "bx-moon");
+//     } else {
+//         darkLight.classList.replace("bx-moon", "bx-sun");
+//     }
+// });
 
-function showNextQuestion() {
-    document.getElementById(`question${currentQuestion}`).style.display = 'none';
+// submenuItems.forEach((item, index) => {
+//     item.addEventListener("click", () => {
+//         item.classList.toggle("show_submenu");
+//         submenuItems.forEach((item2, index2) => {
+//             if (index !== index2) {
+//                 item2.classList.remove("show_submenu");
+//             }
+//         });
+//     });
+// });
 
-    if (currentQuestion < totalQuestions) {
-        currentQuestion++;
-        document.getElementById(`question${currentQuestion}`).style.display = 'block';
-        prevButton.style.display = 'block';
-    }
-
-    if (currentQuestion === totalQuestions) {
-        nextButton.textContent = 'Submit';
-    }
-}
-
-function showPrevQuestion() {
-    if (currentQuestion > 1) {
-        document.getElementById(`question${currentQuestion}`).style.display = 'none';
-        currentQuestion--;
-        document.getElementById(`question${currentQuestion}`).style.display = 'block';
-
-        // if (currentQuestion === 1) {
-        //     prevButton.style.display = 'none';
-        // }
-
-        nextButton.textContent = 'Next';
-    }
-}
-
-prevButton.addEventListener('click', function () {
-    showPrevQuestion();
-});
-
-function showPrevQuestion() {
-    document.getElementById(`question${currentQuestion}`).style.display = 'none';
-
-    if (currentQuestion > 1) {
-        currentQuestion--;
-        document.getElementById(`question${currentQuestion}`).style.display = 'block';
-    }
-
-    // if (currentQuestion === 1) {
-    //     prevButton.style.display = 'none';
-    // }
-
-    nextButton.textContent = 'Next';
-}
-
-
-
+// if (window.innerWidth < 768) {
+//     sidebar.classList.add("close");
+// } else {
+//     sidebar.classList.remove("close");
+// }
