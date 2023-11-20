@@ -306,6 +306,11 @@ body {
     padding: 40px 0px 50px;
 }
 
+.questions p {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
 .sidebar_menu.open~.container {
     left: 250px;
     width: calc(100% - 250px);
@@ -326,22 +331,24 @@ body {
 
 
 #prev_btn {
-    margin-top: 80px;
+    font-size: 15px;
+    margin-top: 65px;
     display: flex;
     margin-left: -20px;
     background-color: #e0fbfc;
-    padding: 15px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 #next_btn {
+    font-size: 15px;
     display: flex;
-    margin-top: -55px;
+    margin-top: -41px;
     margin-left: 350px;
     background-color: #e0fbfc;
-    padding: 15px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
