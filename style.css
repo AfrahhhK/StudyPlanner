@@ -7,6 +7,14 @@
     font-family: "Poppins", sans-serif;
 }
 
+body {
+    display: flex;
+    margin: 0;
+    height: 100vh;
+    background: #e3f2ee;
+
+}
+
 .sidebar_menu {
     position: fixed;
     left: 0;
@@ -258,7 +266,19 @@
 }
 
 .container {
+    /* background-color: #3d5a80;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    color: white;
+    font-family: "Poppins", sans-serif; */
+
+
     position: relative;
+    /* margin: 10%; */
     background: #e3f2ee;
     min-height: 100vh;
     top: 0;
@@ -269,7 +289,8 @@
 }
 
 .box {
-    margin-left: 50px;
+    margin-top: 100px;
+    margin-left: 25%;
     padding: 10px 50px 100;
     height: 400px;
     width: 500px;
@@ -281,7 +302,8 @@
 
 .box h1 {
     color: #e0fbfc;
-    padding: 50px;
+    text-align: center;
+    padding: 40px 0px 50px;
 }
 
 .sidebar_menu.open~.container {
@@ -292,12 +314,17 @@
 .container .Child_Text {
     display: inline-block;
     color: #3d5a80;
-    font-size: 22px;
+    font-size: 42px;
     font-weight: 450;
-    margin: 14px;
+    margin-left: 15%;
+    margin-top: 35px;
+
 }
 
 #prev_btn {
+    margin-top: 110px;
+    display: flex;
+    margin-left: -20px;
     background-color: #e0fbfc;
     padding: 5px;
     border: none;
@@ -306,6 +333,9 @@
 }
 
 #next_btn {
+    display: flex;
+    margin-top: 110px;
+    margin-left: 380px;
     background-color: #e0fbfc;
     padding: 5px;
     border: none;
