@@ -323,11 +323,7 @@ body {
     font-weight: 450;
     margin-left: 15%;
     margin-top: 35px;
-
 }
-
-
-
 
 
 #prev_btn {
@@ -336,7 +332,7 @@ body {
     display: flex;
     margin-left: -20px;
     background-color: #e0fbfc;
-    padding: 10px;
+    padding: 7px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -348,7 +344,7 @@ body {
     margin-top: -41px;
     margin-left: 350px;
     background-color: #e0fbfc;
-    padding: 10px;
+    padding: 7px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
