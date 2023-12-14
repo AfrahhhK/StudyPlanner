@@ -1,53 +1,69 @@
-// const body = document.querySelector("body");
-// const darkLight = document.querySelector("#darkLight");
-// const sidebar = document.querySelector(".sidebar");
-// const submenuItems = document.querySelectorAll(".submenu_item");
-// const sidebarOpen = document.querySelector("#sidebarOpen");
-// const sidebarClose = document.querySelector(".collapse_sidebar");
-// const sidebarExpand = document.querySelector(".expand_sidebar");
-// sidebarOpen.addEventListener("click", () => sidebar.classList.toggle("close"));
+let currentQuestion = 1;
+const totalQuestions = 4;
 
-// sidebarClose.addEventListener("click", () => {
-//     sidebar.classList.add("close", "hoverable");
-// });
-// sidebarExpand.addEventListener("click", () => {
-//     sidebar.classList.remove("close", "hoverable");
-// });
+const nextButton = document.getElementById('next-button');
+const prevButton = document.getElementById('prev-button');
+const toggleButton = document.getElementById('toggleButton');
 
-// sidebar.addEventListener("mouseenter", () => {
-//     if (sidebar.classList.contains("hoverable")) {
-//         sidebar.classList.remove("close");
-//     }
-// });
-// sidebar.addEventListener("mouseleave", () => {
-//     if (sidebar.classList.contains("hoverable")) {
-//         sidebar.classList.add("close");
-//     }
-// });
+toggleButton.addEventListener('click', function () {
+    toggleSidebar();
+});
 
-// darkLight.addEventListener("click", () => {
-//     body.classList.toggle("dark");
-//     if (body.classList.contains("dark")) {
-//         document.setI
-//         darkLight.classList.replace("bx-sun", "bx-moon");
-//     } else {
-//         darkLight.classList.replace("bx-moon", "bx-sun");
-//     }
-// });
+nextButton.addEventListener('click', function () {
+    showNextQuestion();
+});
 
-// submenuItems.forEach((item, index) => {
-//     item.addEventListener("click", () => {
-//         item.classList.toggle("show_submenu");
-//         submenuItems.forEach((item2, index2) => {
-//             if (index !== index2) {
-//                 item2.classList.remove("show_submenu");
-//             }
-//         });
-//     });
-// });
+prevButton.addEventListener('click', function () {
+    showPrevQuestion();
+});
 
-// if (window.innerWidth < 768) {
-//     sidebar.classList.add("close");
-// } else {
-//     sidebar.classList.remove("close");
-// }
+function toggleSidebar() {
+    // document.getElementById('sidebarMenu').style.display='none';
+    $('#sidebarMenu').toggleClass('d-lg-block');
+    // $('#sidebarMenu').toggle();
+        // (sidebar.toggle())
+    // if (sidebar.style.width === '240px') {
+    //   sidebar.style.width = '0';
+    // } else {
+    //   sidebar.style.width = '240px';
+    // }
+}
+
+    
+    
+function showNextQuestion() {
+    document.getElementById(`question${currentQuestion}`).style.display = 'none';
+
+    if (currentQuestion < totalQuestions) {
+        currentQuestion++;
+        document.getElementById(`question${currentQuestion}`).style.display = 'block';
+        prevButton.style.display = 'block';
+    }
+
+    if (currentQuestion === totalQuestions) {
+        nextButton.textContent = 'Submit';
+        nextButton.addEventListener('click', function () {
+            alert('Successfully submitted!');
+         
+        });
+    }
+}
+
+function showPrevQuestion() {
+    document.getElementById(`question${currentQuestion}`).style.display = 'none';
+
+    if (currentQuestion > 1) {
+        currentQuestion--;
+        document.getElementById(`question${currentQuestion}`).style.display = 'block';
+    }
+
+    if (currentQuestion === 1) {
+        prevButton.style.display = 'none';
+    }
+
+    nextButton.textContent = 'Next';
+}
+
+
+
+
