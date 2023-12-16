@@ -1,5 +1,5 @@
 let currentQuestion = 1;
-const totalQuestions = 4;
+const totalQuestions = 19;
 
 const nextButton = document.getElementById('next-button');
 const prevButton = document.getElementById('prev-button');
