@@ -304,3 +304,16 @@ input[type="text"] {
 .question label {
     padding-bottom: 30px;
 }
+ #toggleButton {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000; /* Ensure it's above other elements if needed */
+    cursor: pointer;
+}
+
+/* Additional styles for the icon if needed */
+#toggleButton img {
+    height: 24px;
+    padding: 2px;
+}
