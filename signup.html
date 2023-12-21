@@ -1,0 +1,113 @@
+<!-- signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png">
+
+    <title>Sign Up Page</title>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #add8e6;
+            /* background-color: #98c1d9; */
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #signupForm {
+            background-color: #3d5a80;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            color: white;
+            font-family: "Poppins", sans-serif;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #98c1d9;
+            color: #3d5a80;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="signupForm">
+        <h2>Sign Up</h2>
+        <form>
+            <input type="text" id="name" name="name" placeholder="Full Name" required>
+            <br>
+            <input type="date" id="dob" name="dob" required>
+            <br>
+            <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required>
+            <br>
+            <input type="text" id="course" name="course" placeholder="Course" required>
+            <br>
+            <label for="status">Status:</label>
+            <select id="status" name="status">
+                <option value="working">Working</option>
+                <option value="student">Student</option>
+                <option value="both">Both</option>
+            </select>
+            <br>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function submitForm() {
+            var name = document.getElementById('name').value;
+            var dob = document.getElementById('dob').value;
+            var mobile = document.getElementById('mobile').value;
+            var course = document.getElementById('course').value;
+            var status = document.getElementById('status').value;
+
+            // Basic validation - Check if required fields are not empty
+            if (name === '' || dob === '' || mobile === '' || course === '') {
+                alert('Please fill in all the required fields.');
+                return;
+            }
+
+            // Process the form data (you can send it to a server or perform further actions)
+            // In this example, let's just display an alert with the collected information
+            var message = `Name: ${name}\nDate of Birth: ${dob}\nMobile Number: ${mobile}\nCourse: ${course}\nStatus: ${status}`;
+            alert(message);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    /*height of the box*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    /* background-color: lightblue; */
+    background-color: rgb(212, 197, 168) !important;
+
+}
+
+#login-form input {
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(13, 51, 62) !important;
+
+}
+
+.container {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: rgb(255, 255, 255, 0.4);
+    border-radius: 5px;
+    display: grid;
+    justify-items: center;
+    align-items: center;     
+} 
+
+.login-form-field {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+}
+#submit{
+    margin: 5px;
+}
+#clear{
+    margin: 5px;
+}
+
+#login-error-msg-holder {
+    width: 200%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    margin: 15px;
+}
+
+#login-error-msg {
+    width: 23%;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #8a0000;
+    border: 1px solid #8a0000;
+    background-color: #e58f8f;
+    opacity: 0;
+}
+
+#submit {
+    display: flex;
+    margin-left: -100px;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 13px 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(13, 51, 62);
+    font-size: 17px;
+
+}
+
+#error-msg-second-line {
+    display: block;
+}
+
+.btn {
+    display: flex;
+}
+
+#clear {
+    display: flex;
+    margin-right: -150px;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    justify-content: center;
+    padding: 13px 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(13, 51, 62);
+    font-size: 17px;
+}
+
+#clear:hover,
+#submit:hover {
+    background-color: rgb(13, 51, 62);
+    color: white;
+    cursor: pointer;
+}
+
+#login-form {
+    /* align-self: flex-start; */
+    display: grid;
+    /* gap: 15px; */
+    justify-items: center;
+    align-items: center;
+}
+
+.container h1 {
+    padding-top: 50px;
+}
+
+.login-form-field {
+    font-size: 18px;
+    border: none;
+    border-bottom: 2px solid rgb(13, 51, 62);
+    margin-bottom: 50px;
+    border-radius: 5px;
+    outline: none;
+    padding: 0px 0px 5px 10px;
+}

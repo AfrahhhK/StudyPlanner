@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Sidebar Example</title>
+</head>
+<style>
+ body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  padding: 5px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  color: white;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #818181;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#toggleButton {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+   
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+</style>
+<body>
+
+  <button id="toggleButton">Click here</button>
+
+  <div class="container">
+   
+    <!-- Body content goes here -->
+  </div>
+
+  <div class="sidebar" id="sidebar">
+    <!-- Sidebar content goes here -->
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">X</a>
+    <!-- Sidebar content goes here -->
+  </div>
+
+
+ 
+  
+<script >
+    document.getElementById('toggleButton').addEventListener('click', function() {
+  toggleSidebar();
+});
+
+function toggleSidebar() {
+  var sidebar = document.getElementById('sidebar');
+  if (sidebar.style.width === '200px') {
+    sidebar.style.width = '0';
+  } else {
+    sidebar.style.width = '200px';
+  }
+}
+</script>
+</body>
+</html>

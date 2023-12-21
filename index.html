@@ -16,25 +16,28 @@
 </head>
 
 <body>
-
-
     <!--Main Navigation-->
     <header>
-        <!-- Sidebar -->
-        <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+<!-- hamburger btn -->
+        <button id="toggleButton"> <img src="bar.png"  style="height: 24px; padding: 2px;" alt=""></button>
+
+<!-- Sidebar -->
+        <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white"> 
+
+<!-- cross button -->
+            <div class="crossbtn" id="cross" style="text-align: right; padding:10px; cursor: pointer;" >
+                <a class="closebtn" style="text-decoration: none; color: rgb(6, 38, 51);
+                " onclick="toggleSidebar()">X</a>
+            </div>
+
             <div class="position-sticky">
                 <div class="list-group list-group-flush mx-3 mt-4">
                     <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
                         <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Main dashboard</span>
                     </a>
-
+<!-- sidebar options -->
                     <a href="https://www.google.com/" class="list-group-item list-group-item-action py-2 ripple"><i
-                            class="fas fa-lock fa-fw me-3"></i><span>Password</span></a>
-                    <a href="https://www.google.com/" class="list-group-item list-group-item-action py-2 ripple"><i
-                            class="fas fa-chart-line fa-fw me-3"></i><span>Demo1</span></a>
-                    <a href="https://www.google.com/" class="list-group-item list-group-item-action py-2 ripple">
-                        <i class="fas fa-chart-pie fa-fw me-3"></i><span>Demo2</span>
-                    </a>
+                            class="fas fa-lock fa-fw me-3"></i><span>Password</span></a>                
                     <a href="https://www.google.com/" class="list-group-item list-group-item-action py-2 ripple"><i
                             class="fas fa-chart-bar fa-fw me-3"></i><span>Time table</span></a>
                     <a href="https://www.google.com/" class="list-group-item list-group-item-action py-2 ripple"><i
@@ -48,138 +51,346 @@
                     <a href="https://www.google.com/" class="list-group-item list-group-item-action py-2 ripple"><i
                             class="fas fa-money-bill fa-fw me-3"></i><span>Others</span></a>
                 </div>
-            </div>
+            </div>            
         </nav>
-        <!-- Sidebar -->
-
-
-
-        <!-- Right links -->
-        <ul class="navbar-nav ms-auto d-flex flex-row">
-            <!-- Notification dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdownMenuLink"
-                    role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-bell"></i>
-                </a>
-                
-            </li>
-
-            <!-- Icon -->
-            <li class="nav-item">
-                <a class="nav-link me-3 me-lg-0" href="#">
-                    <i class="fas fa-fill-drip"></i>
-                </a>
-            </li>
-            <!-- Icon -->
-            <li class="nav-item me-3 me-lg-0">
-                <a class="nav-link" href="#">
-                    <i class="fab fa-github"></i>
-                </a>
-            </li>
-
-            <!-- Icon dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdown" role="button"
-                    data-mdb-toggle="dropdown" aria-expanded="false">
-                    <i class="united kingdom flag m-0"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li>
-                        <a class="dropdown-item" href="#"><i class="united kingdom flag"></i>English
-                            <i class="fa fa-check text-success ms-2"></i></a>
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#"><i class="flag-poland flag"></i>Polski</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#"><i class="flag-china flag"></i>中文</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#"><i class="flag-japan flag"></i>日本語</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#"><i class="flag-germany flag"></i>Deutsch</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#"><i class="flag-france flag"></i>Français</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#"><i class="flag-spain flag"></i>Español</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#"><i class="flag-russia flag"></i>Русский</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#"><i class="flag-portugal flag"></i>Português</a>
-                    </li>
-                </ul>
-            </li>
-
-            <!-- Avatar -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
-                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                    <li>
-                        <a class="dropdown-item" href="#">My profile</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Settings</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Logout</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        </div>
-        <!-- Container wrapper -->
-        </nav>
-        <!-- Navbar -->
-    </header>
-    <!--Main Navigation-->
-
-
-
-
-
+      
+<!--Main Navigation-->
     <div class="container col-6">
-        <h1>Enter details</h1>
-        <form action=" " method="get">
-            <div class="question" id="question1">
-                <label for="fname1">What is your name?</label><br>
-                <input type="text" id="fname1" name="fname1">
-            </div>
-            <div class="question" id="question2" style="display: none;">
-                <label for="fname2">What is your age?</label><br>
-                <input type="text" id="fname2" name="fname2">
-            </div>
-            <div class="question" id="question3" style="display: none;">
-                <label for="gender">Select your gender:</label><br>
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Female</label><br>
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Male</label><br>
-                <input type="radio" id="other" name="gender" value="other">
-                <label for="other">Other</label><br>
-            </div>
-            <div class="question" id="question4" style="display: none;">
-                <label for="fname2">How many hours do you sleep for?</label><br>
-                <input type="text" id="fname2" name="fname2">
-            </div>
-        </form>
+        <div class="row">
+            <h2>Enter details</h2>
+            <form action=" " method="get">
+<!-- name -->
+                <div class="question" id="question1">
+                    <label for="fname1">What is your name?</label><br>
+                    <input type="text" id="fname1" name="fname1">
+                </div>
+<!-- age -->
+                <div class="question" id="question2" style="display: none;">
+                    <label for="fname2">What is your age?</label><br>
+                    <div class="radio-group">
+                        <input type="radio" id="18-22" name="age" value="18-22">
+                        <label for="18-22">18 - 22</label><br>
+                        <input type="radio" id="23-26" name="age" value="23-26">
+                        <label for="23-26">23 - 26</label><br>              
+                        <input type="radio" id="27-30" name="age" value="27-30">
+                        <label for="27-30">27 - 30</label><br>    
+                    </div>     
+                </div>
+<!-- gender -->
+                <div class="question" id="question3" style="display: none;">
+                    <label for="gender">Select your gender</label><br>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female  </label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>                
+                </div>
+<!-- sleep -->
+                <div class="question" id="question4" style="display: none;">
+                    <label for="sleep">How many hours do you sleep for?</label><br>
+                    <input type="text" id="sleep" name="sleep">
+                </div>
+<!-- course -->
+                <div class="question" id="question5" style="display: none;">
+                    <label for="fname2">Course/ Major </label><br>
+                    <div class="radio-group">
+   
+                        <input type="radio" id="Bussiness" name="age" value="Bussiness">
+                        <label for="18-22">Bussiness</label><br>
 
-        <div class="d-flex justify-content-between">
-            <button class="btn btn-outline-primary" id="previous-button" style="display: none">Previous</button>
-            <button class="btn  " id="next-button" style="float: right;">Next</button>
+                        <input type="radio" id="Art and Design" name="age" value="Art and Design">
+                        <label for="Art and Design">Art and Design</label><br>  
+                                    
+                        <input type="radio" id="Computing (CS or Computer Engineering)" name="age" value="Computing (CS or Computer Engineering)">
+                        <label for="Computing (CS or Computer Engineering)">Computing (CS or Computer Engineering)</label><br> 
+
+                        <input type="radio" id="Law/ Legal Studes" name="age" value="Law/ Legal Studes">
+                        <label for="Law/ Legal Studes">Law/ Legal Studes</label><br>  
+
+                        <input type="radio" id="Science and Engineering" name="age" value="Science and Engineering">
+                        <label for="Science and Engineering">Science and Engineering</label><br>  
+
+                        <input type="radio" id="Science and Engineering" name="age" value="Science and Engineering">
+                        <label for="Science and Engineering">Science and Engineering</label><br>  
+
+                        <input type="radio" id="Social Sciences and Humanities" name="age" value="Social Sciences and Humanities">
+                        <label for="Social Sciences and Humanities">Social Sciences and Humanities</label><br> 
+                        
+
+                        <input type="radio" id="Media and Communications" name="age" value="Media and Communications">
+                        <label for="Media and Communications">Media and communications</label><br> 
+                    </div>
+
+                </div>
+<!-- gpa -->
+                <div class="question" id="question6" style="display: none;">
+                    <label for="gpa">Academic GPA</label><br>
+                    <input type="text" id="sleep" name="gpa">
+                </div>
+<!-- attendance -->
+                <div class="question" id="question7" style="display: none;">
+                    <label for="attendance">Attendance (0 means the most attendance, the level of stage will be upgraded by every 3-4 absence, and 4 means the least attendance)</label>
+                    <div class="radio-group">
+                        <input type="radio" name="attendance" value="0">
+                        <label for="attendance">0</label>
+                        <input type="radio" name="attendance" value="1">
+                        <label for="attendance"> 1</label>
+                        <input type="radio" name="attendance" value="2">
+                        <label for="attendance"> 2</label>
+                        <input type="radio" name="attendance" value="3">
+                        <label for="attendance"> 3</label>
+                        <input type="radio" name="attendance" value="4">
+                        <label for="attendance">4</label>   
+                    </div>         
+                </div>
+<!--purpose/ aimless -->
+                <div class="question" id="question8" style="display: none;">
+                    <label for="purpose">You often feel that your life is aimless, with no definite purpose</label><br>
+                    <div class="radio-group">
+                        <input type="radio" id="Strongly agree" name="purpose" value="Strongly agree">
+                        <label for="Strongly agree">Strongly agree</label><br>
+
+                        <input type="radio" id="Agree" name="purpose" value="Agree">
+                        <label for="Agree">Agree</label><br>                                               
+                        <input type="radio" id="Neither Agree nor Disagree" name="purpose" value="Neither Agree nor Disagree">
+                        <label for="Neither Agree nor Disagree">Neither Agree nor Disagree</label><br>  
+
+                        <input type="radio" id="Disagree" name="purpose" value="Disagree">
+                        <label for="Disagree">Disagree</label><br>   
+
+                        <input type="radio" id="Strongly disagree" name="purpose" value="Strongly disagree">
+                        <label for="Strongly disagree">Strongly disagree</label><br> 
+                    </div>          
+                </div>
+<!--things don't matter -->
+                <div class="question" id="question9" style="display: none;">
+                    <label for="matter">You often feel that your life is aimless, with no definite purpose</label><br>
+                    <div class="radio-group">
+                        <input type="radio" id="Strongly agree" name="matter" value="Strongly agree">
+                        <label for="Strongly agree">Strongly agree</label><br>
+
+                        <input type="radio" id="Agree" name="matter" value="Agree">
+                        <label for="Agree">Agree</label><br>                                               
+                        <input type="radio" id="Neither Agree nor Disagree" name="matter" value="Neither Agree nor Disagree">
+                        <label for="Neither Agree nor Disagree">Neither Agree nor Disagree</label><br>  
+
+                        <input type="radio" id="Disagree" name="matter" value="Disagree">
+                        <label for="Disagree">Disagree</label><br>   
+
+                        <input type="radio" id="Strongly disagree" name="matter" value="Strongly disagree">
+                        <label for="Strongly disagree">Strongly disagree</label><br>     
+                    </div>      
+                </div>
+<!--lastMin-->
+                <div class="question" id="question10" style="display: none;">
+                    <label for="lastMin">You tend to leave things to the last minute?
+                    </label><br>
+                    <div class="radio-group">    
+                        <input type="radio" id="Strongly agree" name="lastMin" value="Strongly agree">
+                        <label for="Strongly agree">Strongly agree</label><br>
+
+                        <input type="radio" id="Agree" name="lastMin" value="Agree">
+                        <label for="Agree">Agree</label><br>                                               
+                        <input type="radio" id="Neither Agree nor Disagree" name="lastMin" value="Neither Agree nor Disagree">
+                        <label for="Neither Agree nor Disagree">Neither Agree nor Disagree</label><br>  
+
+                        <input type="radio" id="Disagree" name="lastMin" value="Disagree">
+                        <label for="Disagree">Disagree</label><br>   
+
+                        <input type="radio" id="Strongly disagree" name="lastMin" value="Strongly disagree">
+                        <label for="Strongly disagree">Strongly disagree</label><br>  
+                    </div>         
+                </div>
+<!--change aimlessly-->
+                <div class="question" id="question11" style="display: none;">
+                    <label for="aimlessly">You tend to change rather aimlessly from one activity to another during the day
+                    </label><br>    
+                    <div class="radio-group">
+                        <input type="radio" id="Strongly agree" name="aimlessly" value="Strongly agree">
+                        <label for="Strongly agree">Strongly agree</label><br>
+
+                        <input type="radio" id="Agree" name="aimlessly" value="Agree">
+                        <label for="Agree">Agree</label><br>                                               
+                        <input type="radio" id="Neither Agree nor Disagree" name="aimlessly" value="Neither Agree nor Disagree">
+                        <label for="Neither Agree nor Disagree">Neither Agree nor Disagree</label><br>  
+
+                        <input type="radio" id="Disagree" name="aimlessly" value="Disagree">
+                        <label for="Disagree">Disagree</label><br>   
+
+                        <input type="radio" id="Strongly disagree" name="aimlessly" value="Strongly disagree">
+                        <label for="Strongly disagree">Strongly disagree</label><br>   
+                    </div>        
+                </div>
+                </div>
+<!--give up coz of friend-->
+                <div class="question" id="question12" style="display: none;">
+                    <label for="giveUp">You give up the things that you planning to do just because your friend says no
+                    </label><br>
+                    <div class="radio-group">
+                        <input type="radio" id="Strongly agree" name="giveUp" value="Strongly agree">
+                        <label for="Strongly agree">Strongly agree</label><br>
+
+                        <input type="radio" id="Agree" name="giveUp" value="Agree">
+                        <label for="Agree">Agree</label><br>                                               
+                        <input type="radio" id="Neither Agree nor Disagree" name="giveUp" value="Neither Agree nor Disagree">
+                        <label for="Neither Agree nor Disagree">Neither Agree nor Disagree</label><br>  
+
+                        <input type="radio" id="Disagree" name="giveUp" value="Disagree">
+                        <label for="Disagree">Disagree</label><br>   
+
+                        <input type="radio" id="Strongly disagree" name="giveUp" value="Strongly disagree">
+                        <label for="Strongly disagree">Strongly disagree</label><br>  
+                    </div>         
+                </div>
+<!--bored of day to day activities-->
+                <div class="question" id="question13" style="display: none;">
+                    <label for="bored">You are easy to get bored with your day-today activities.
+                    </label><br>
+                    <div class="radio-group">
+                        <input type="radio" id="Strongly agree" name="bored" value="Strongly agree">
+                        <label for="Strongly agree">Strongly agree</label><br>
+
+                        <input type="radio" id="Agree" name="bored" value="Agree">
+                        <label for="Agree">Agree</label><br>                                               
+                        <input type="radio" id="Neither Agree nor Disagree" name="bored" value="Neither Agree nor Disagree">
+                        <label for="Neither Agree nor Disagree">Neither Agree nor Disagree</label><br>  
+
+                        <input type="radio" id="Disagree" name="bored" value="Disagree">
+                        <label for="Disagree">Disagree</label><br>   
+
+                        <input type="radio" id="Strongly disagree" name="bored" value="Strongly disagree">
+                        <label for="Strongly disagree">Strongly disagree</label><br>     
+                    </div>      
+                </div>
+<!--interest changes frequently-->
+                <div class="question" id="question14" style="display: none;">
+                    <label for="interests">The important interests/activities in your life tend to change frequently
+                    </label><br>
+                    <div class="radio-group">
+                        <input type="radio" id="Strongly agree" name="interests" value="Strongly agree">
+                        <label for="Strongly agree">Strongly agree</label><br>
+
+                        <input type="radio" id="Agree" name="interests" value="Agree">
+                        <label for="Agree">Agree</label><br>                                               
+                        <input type="radio" id="Neither Agree nor Disagree" name="interests" value="Neither Agree nor Disagree">
+                        <label for="Neither Agree nor Disagree">Neither Agree nor Disagree</label><br>  
+
+                        <input type="radio" id="Disagree" name="interests" value="Disagree">
+                        <label for="Disagree">Disagree</label><br>   
+
+                        <input type="radio" id="Strongly disagree" name="interests" value="Strongly disagree">
+                        <label for="Strongly disagree">Strongly disagree</label><br>  
+                    </div>         
+                </div>                
+<!--trouble organizing-->
+                <div class="question" id="question15" style="display: none;">
+                    <label for="organizing">You never have trouble organizing the things you have to do?
+                    <div class="radio-group">
+                        </label><br>
+                        <input type="radio" id="Strongly agree" name="organizing" value="Strongly agree">
+                        <label for="Strongly agree">Strongly agree</label><br>
+
+                        <input type="radio" id="Agree" name="organizing" value="Agree">
+                        <label for="Agree">Agree</label><br>                                               
+                        <input type="radio" id="Neither Agree nor Disagree" name="organizing" value="Neither Agree nor Disagree">
+                        <label for="Neither Agree nor Disagree">Neither Agree nor Disagree</label><br>  
+
+                        <input type="radio" id="Disagree" name="organizing" value="Disagree">
+                        <label for="Disagree">Disagree</label><br>   
+
+                        <input type="radio" id="Strongly disagree" name="organizing" value="Strongly disagree">
+                        <label for="Strongly disagree">Strongly disagree</label><br>   
+                </div>        
+                </div>                
+<!--complete activity-->
+                <div class="question" id="question16" style="display: none;">
+                    <label for="complete">Once you've started an activity, you persist at it until you've completed it
+                    </label><br>
+                    <div class="radio-group">
+                        <input type="radio" id="Strongly agree" name="complete" value="Strongly agree">
+                        <label for="Strongly agree">Strongly agree</label><br>
+
+                        <input type="radio" id="Agree" name="complete" value="Agree">
+                        <label for="Agree">Agree</label><br>                                               
+                        <input type="radio" id="Neither Agree nor Disagree" name="complete" value="Neither Agree nor Disagree">
+                        <label for="Neither Agree nor Disagree">Neither Agree nor Disagree</label><br>  
+
+                        <input type="radio" id="Disagree" name="complete" value="Disagree">
+                        <label for="Disagree">Disagree</label><br>   
+
+                        <input type="radio" id="Strongly disagree" name="complete" value="Strongly disagree">
+                        <label for="Strongly disagree">Strongly disagree</label><br>  
+                    </div>         
+                </div>                
+<!--plan daily activity-->
+                <div class="question" id="question17" style="display: none;">
+                    <label for="plan">You will plan your activities from day to day.</label><br>
+                    <div class="radio-group">
+                        <input type="radio" id="Strongly agree" name="plan" value="Strongly agree">
+                        <label for="Strongly agree">Strongly agree</label><br>
+
+                        <input type="radio" id="Agree" name="plan" value="Agree">
+                        <label for="Agree">Agree</label><br>                                               
+                        <input type="radio" id="Neither Agree nor Disagree" name="plan" value="Neither Agree nor Disagree">
+                        <label for="Neither Agree nor Disagree">Neither Agree nor Disagree</label><br>  
+
+                        <input type="radio" id="Disagree" name="plan" value="Disagree">
+                        <label for="Disagree">Disagree</label><br>   
+
+                        <input type="radio" id="Strongly disagree" name="plan" value="Strongly disagree">
+                        <label for="Strongly disagree">Strongly disagree</label><br>    
+                    </div>       
+                </div>                
+<!--You think you do enough with your time-->
+                <div class="question" id="question18" style="display: none;">
+                    <label for="enough">You think you do enough with your time.</label><br>
+                        <div class="radio-group">
+                            <input type="radio" id="Strongly agree" name="enough" value="Strongly agree">
+                            <label for="Strongly agree">Strongly agree</label><br>
+
+                            <input type="radio" id="Agree" name="complete" value="Agree">
+                            <label for="Agree">Agree</label><br>                                               
+                            <input type="radio" id="Neither Agree nor Disagree" name="enough" value="Neither Agree nor Disagree">
+                            <label for="Neither Agree nor Disagree">Neither Agree nor Disagree</label><br>  
+
+                            <input type="radio" id="Disagree" name="enough" value="Disagree">
+                            <label for="Disagree">Disagree</label><br>   
+
+                            <input type="radio" id="Strongly disagree" name="enough" value="Strongly disagree">
+                            <label for="Strongly disagree">Strongly disagree</label><br>   
+                        </div>        
+                </div>                
+<!--time on homework-->
+                <div class="question" id="question19" style="display: none;">
+                    <label for="homework">You know how much time you spend on each of the homework you do.</label><br>
+                    <div class="radio-group">
+                        <input type="radio" id="Strongly agree" name="homework" value="Strongly agree">
+                        <label for="Strongly agree">Strongly agree</label><br>
+
+                        <input type="radio" id="Agree" name="homework" value="Agree">
+                        <label for="Agree">Agree</label><br>                                               
+                        <input type="radio" id="Neither Agree nor Disagree" name="homework" value="Neither Agree nor Disagree">
+                        <label for="Neither Agree nor Disagree">Neither Agree nor Disagree</label><br>  
+
+                        <input type="radio" id="Disagree" name="homework" value="Disagree">
+                        <label for="Disagree">Disagree</label><br>   
+
+                        <input type="radio" id="Strongly disagree" name="homework" value="Strongly disagree">
+                        <label for="Strongly disagree">Strongly disagree</label><br>   
+                    </div>        
+                </div>                
+
+
+</form>
+    <!-- buttons - prev, next -->
+            <div class="d-flex justify-content-between">        
+                <button class="btn" id="prev-button" style="float: right;">Previous</button>
+                <button class="btn" id="next-button" style="float: right;">Next</button>
+            </div>
         </div>
+        
     </div>
     <script src="script.js"></script>
 </body>
 
 </html>
+
