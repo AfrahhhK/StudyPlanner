@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Timetable Generator</title>
+    <link rel="icon" href="icon.png" type="image/png">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(13, 51, 62) !important;
+            text-align: center;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #timetableContainer {
+            background-color: rgb(212, 197, 168);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: rgb(13, 51, 62) !important;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="timetableContainer">
+        <h2 style="color: rgb(13, 51, 62);">Enter details</h2>
+        <form id="timetableForm">
+            <label for="totalStudyHours">Total Study Hours per Week:</label>
+            <input type="number" id="totalStudyHours" name="totalStudyHours" required>
+
+            <label for="studyDaysPerWeek">Study Days per Week:</label>
+            <input type="number" id="studyDaysPerWeek" name="studyDaysPerWeek" required>
+
+            <label for="hoursPerSitting">Hours per Sitting:</label>
+            <input type="number" id="hoursPerSitting" name="hoursPerSitting" required>
+
+            <label for="preferredTime">Preferred Time:</label>
+            <select id="preferredTime" name="preferredTime" required>
+                <option value="1">Morning</option>
+                <option value="2">Noon</option>
+                <option value="3">Evening</option>
+                <option value="4">Night</option>
+            </select>
+
+            <button type="button" onclick="generateTimetable()">Generate Timetable</button>
+        </form>
+    </div>
+
+    <script>
+        function generateTimetable() {
+            // Retrieve values from the form
+            var totalStudyHours = document.getElementById("totalStudyHours").value;
+            var studyDaysPerWeek = document.getElementById("studyDaysPerWeek").value;
+            var hoursPerSitting = document.getElementById("hoursPerSitting").value;
+            var preferredTime = document.getElementById("preferredTime").value;
+            
+            console.log("Total Study Hours per Week:", totalStudyHours);
+            console.log("Study Days per Week:", studyDaysPerWeek);
+            console.log("Hours per Sitting:", hoursPerSitting);
+            console.log("Preferred Time:", preferredTime);
+
+            alert("Submitted");
+
+        }
+    </script>
+</body>
+</html>
