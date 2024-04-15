@@ -8,7 +8,7 @@
     <link rel="icon" href="icon.png">
 
     <title>Sign Up Page</title>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
@@ -67,12 +67,14 @@
 
     <div id="signupForm">
         <h2>Sign Up</h2>
-        <form>
+        <form action="cred.php">
             <input type="text" id="name" name="name" placeholder="Full Name" required>
             <br>
             <input type="date" id="dob" name="dob" required>
             <br>
             <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" required>
+            <br>            
+            <input type="number" id="course" name="age" placeholder="Enter age" required>
             <br>
             <input type="text" id="course" name="course" placeholder="Course" required>
             <br>
@@ -83,7 +85,17 @@
                 <option value="both">Both</option>
             </select>
             <br>
-            <button type="button" onclick="submitForm()">Submit</button>
+            <label for="status">Course:</label>
+            <select id="course" name="course">
+                <option value="working">Bussiness</option>
+                <option value="student">Art and Design</option>
+                <option value="both">Computer Science</option>
+                <option value="both">Law/ Legal Studies</option>
+                <option value="both">Media and Communications</option>
+                <option value="working">Other</option>
+            </select>
+            <br>
+            <button type="submit"value="Submit" onclick="submitForm()">Submit</button>
         </form>
     </div>
 
@@ -95,6 +107,7 @@
             var course = document.getElementById('course').value;
             var status = document.getElementById('status').value;
 
+
             // Basic validation - Check if required fields are not empty
             if (name === '' || dob === '' || mobile === '' || course === '') {
                 alert('Please fill in all the required fields.');
@@ -105,6 +118,21 @@
             // In this example, let's just display an alert with the collected information
             var message = `Name: ${name}\nDate of Birth: ${dob}\nMobile Number: ${mobile}\nCourse: ${course}\nStatus: ${status}`;
             alert(message);
+            $.ajax({
+                url: 'cred.php',
+                type: 'POST',
+                // data: {
+                //     username: username,
+                //     password: password
+                // },
+                success: function(response) {
+                    console.log(response);
+                    // Handle the response from PHP here
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
         }
     </script>
 
