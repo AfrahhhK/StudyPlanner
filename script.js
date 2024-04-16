@@ -4,6 +4,7 @@ const totalQuestions = 19;
 const nextButton = document.getElementById('next-button');
 const prevButton = document.getElementById('prev-button');
 const toggleButton = document.getElementById('toggleButton');
+const questionnaireLink = document.getElementById('questionnaireLink'); // Add this line
 
 toggleButton.addEventListener('click', function () {
     toggleSidebar();
@@ -17,20 +18,15 @@ prevButton.addEventListener('click', function () {
     showPrevQuestion();
 });
 
+questionnaireLink.addEventListener('click', function (e) { // Add this block
+    e.preventDefault(); // Prevent the default action of the link
+    document.getElementById('questionnaireForm').style.display = 'block'; // Show the questionnaire form
+});
+
 function toggleSidebar() {
-    // document.getElementById('sidebarMenu').style.display='none';
     $('#sidebarMenu').toggleClass('d-lg-block');
-    // $('#sidebarMenu').toggle();
-        // (sidebar.toggle())
-    // if (sidebar.style.width === '240px') {
-    //   sidebar.style.width = '0';
-    // } else {
-    //   sidebar.style.width = '240px';
-    // }
 }
 
-    
-    
 function showNextQuestion() {
     document.getElementById(`question${currentQuestion}`).style.display = 'none';
 
@@ -44,8 +40,11 @@ function showNextQuestion() {
         nextButton.textContent = 'Submit';
         nextButton.addEventListener('click', function () {
             alert('Successfully submitted!');
-         
         });
+    }
+
+    if (currentQuestion === 1) {
+        document.getElementById('questionnaireForm').style.display = 'none'; // Hide the questionnaire form
     }
 }
 
@@ -62,8 +61,8 @@ function showPrevQuestion() {
     }
 
     nextButton.textContent = 'Next';
+
+    if (currentQuestion === 1) {
+        document.getElementById('questionnaireForm').style.display = 'none'; // Hide the questionnaire form
+    }
 }
-
-
-
-
