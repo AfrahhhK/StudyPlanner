@@ -3,29 +3,10 @@ from sklearn.cluster import KMeans
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import pairwise_distances_argmin_min
 
-def get_recommendation():
-        # Create a DataFrame from the CSV data
+def get_recommendation(user_input):
+    
+    # Create a DataFrame from the CSV data
     df = pd.read_csv(r"final_data.csv")
-
-
-    # Assume user provides input in a dictionary format
-    user_input = {
-        'Academic': 2,
-        'Attendance': 3, 
-        '6': 2.0,
-        '7': 3,
-        '8': 3.0,
-        '9': 3.0,
-        '10': 2.0,
-        '11': 2.0,
-        '12': 2,
-        '13': 3.0,
-        '14': 4,
-        '15': 3.0,
-        '16': 4.0,
-        '17': 4.0,
-        'Course': 'Science and engineering'
-    }
 
     # Extract the relevant columns for clustering
     columns_for_clustering = ['Academic', 'Attendance', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17']

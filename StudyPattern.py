@@ -173,6 +173,3 @@ def print_possibilities_fitness(population, recommendation_dict):
         fitness_score = fitness(study_pattern, total_hours_per_week, days_per_week, hours_per_sitting)
         print(f"Study Pattern: {study_pattern}, Fitness Score: {fitness_score}")
 
-
-
-
